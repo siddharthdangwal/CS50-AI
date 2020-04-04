@@ -1,0 +1,34 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Apr  2 13:44:40 2020
+
+@author: siddharth
+"""
+
+from tictactoe import initial_state, player, actions, result, winner, terminal, minimax
+
+
+
+X = "X"
+O = "O"
+EMPTY = None
+
+a = [[X, X, O],
+     [EMPTY, O, O],
+     [X, X, EMPTY]]
+
+print(initial_state(), '\n')
+
+print(player(a), '\n')
+
+possible_actions = actions(a)
+print(possible_actions, '\n')
+
+
+result_board = result(a, possible_actions[0])
+print(result_board, '\n')
+
+print(winner(a), '\n')
+
+print(terminal(a), '\n')
